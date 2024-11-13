@@ -1,0 +1,210 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #002b5b; /* Novo azul escuro */
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Branco para contraste */
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #9ff4f5; /* Novo verde água */
+}
+
+/* Linha ao passar o mouse */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: #9ff4f5; /* Novo verde água */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Seções */
+.section {
+    padding: 70px 20px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: #ffffff;
+    margin-top: 60px;
+}
+
+.section h1, .section h2, .section h3 {
+    color: #002b5b; /* Novo azul escuro */
+    margin-bottom: 15px;
+}
+
+.section p {
+    color: #555;
+}
+
+.section:nth-child(even) {
+    background-color: #f3f8fa;
+}
+
+.services, .team {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.services li, .team li {
+    background-color: #9ff4f5; /* Novo fundo verde água */
+    padding: 20px;
+    border-radius: 12px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #002b5b; /* Novo azul escuro */
+}
+
+.services li:hover, .team li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.services h4 {
+    font-size: 1.2rem;
+    color: #002b5b; /* Novo azul escuro */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.services p {
+    font-size: 0.9rem;
+    color: #002b5b; /* Azul escuro */
+}
+
+/* Ícones nos Serviços */
+.services i {
+    font-size: 2rem;
+    color: #002b5b; /* Azul escuro */
+    margin-bottom: 10px;
+}
+
+/* Adicionando uma Animação Suave */
+.services li, .services h4, .services p, .services i {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.services li:hover i {
+    color: #002b5b; /* Azul escuro no hover */
+}
+
+/* Formulário de Contato */
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contato form label {
+    font-weight: bold;
+    color: #002b5b;
+}
+
+#contato form input, #contato form textarea, #contato form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contato form button {
+    background-color: #002b5b;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#contato form button:hover {
+    background-color: #004080; /* Azul escuro mais intenso no hover */
+}
+
+#mapa {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animações de entrada */
+.section h1, .section h2, .section h3, .services li, .team li, #contato form, #mapa {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section h1, .section h2, .section h3, .services li, .team li, #contato form, #mapa {
+    opacity: 1;
+    transform: translateY(0);
+}

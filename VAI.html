@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flua Systems</title>
+    <link rel="stylesheet" href="VAI.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="./IMG-20241111-WA0047 (2).jpg" alt="Logo da Flua Systems">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="section inicio">
+        <h1>Bem-vindo à Flua Systems</h1>
+        <p>Transformando desafios complexos em soluções tecnológicas eficientes e inovadoras.</p>
+        <button onclick="document.getElementById('servicos').scrollIntoView({ behavior: 'smooth' })">Conheça nossos serviços</button>
+    </section>
+
+    <section id="servicos" class="section servicos">
+        <h2>Serviços Oferecidos</h2>
+        <div class="services">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h4>Desenvolvimento Web</h4>
+                <p>Criamos sites modernos e funcionais para a sua empresa.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>Aplicativos Mobile</h4>
+                <p>Desenvolvimento de apps para Android e iOS.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cloud"></i>
+                <h4>Soluções em Nuvem</h4>
+                <p>Infraestrutura confiável para suportar seu crescimento.</p>
+            </div>
+        </div>
+    </section>
+    
+
+   
+    <section id="sobre" class="section empresa">
+        <h2>Sobre a Flua Systems</h2>
+        <p>Na Flua Systems, transformamos desafios complexos em soluções tecnológicas eficientes e inovadoras. Nossa equipe é formada por especialistas comprometidos com a excelência e evolução constante.</p>
+        
+        <div class="team">
+            <div class="team-member">
+                <img src="./ana.jpg" alt="Ana Luiza Bertarelli">
+                <h4>Ana Luiza Bertarelli</h4>
+                <p>Lider - App Designer</p>
+                <p>Especialista em soluções web e mobile, focado em inovação e qualidade.</p>
+            </div>
+            
+            <div class="team-member">
+                <img src="./felipe.jpeg" alt="Nome do Integrante">
+                <h4>Felipe Fornazeiro</h4>
+                <p>Web e Logo Designer</p>
+                <p>Especialista em web e logo designer.</p>
+            </div>
+            
+            <div class="team-member">
+                <img src="./flavio.jfif" alt="Nome do Integrante">
+                <h4>Flávio Henrique</h4>
+                <p>?</p>
+                <p>?</p>
+            </div>
+        </div>
+    </section>
+    
+
+  
+    <section id="contato" class="section contato">
+        <h2>Contato</h2>
+        <div class="contact-container">
+            <form>
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="map-container">
+                <p>Nosso escritório está localizado em São Paulo, no Itaim Bibi:</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.4634230844067!2d-46.681052!3d-23.586454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59dfb7f0f999%3A0x6421fdbf133b5b5!2sItaim%20Bibi%2C%20São%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1637489125361!5m2!1spt-BR!2sbr" 
+                width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
